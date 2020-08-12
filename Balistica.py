@@ -1,3 +1,4 @@
+#Estou utilizando um código de calculo balístico de projéteis de morteiro em um mapa de grade genérico de um terreno para fim de aprendizado
 import math
 import os
 
