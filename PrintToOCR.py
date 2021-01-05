@@ -1,8 +1,10 @@
 from PIL import Image # Abrir a imagem no script
 import pytesseract # Módulo da tecnologia OCR
-import pyautogui as pg
+import pyautogui as pg # Screenshot
 
 #achar um modo de automatizar esse processo com algum listener >> não consigo guardar as coordenadas no pg.position em variáveis
+#podemos colocar um listener para um "selecionar área"
+#podemos filtrar digitos das strings
 input("Fique com o mouse no ponto superior esquerdo e aperte enter")
 print(pg.position())
 ax = int(input("Entre com o valor de X"))
