@@ -14,7 +14,7 @@ Este código foi desenvolvido com o intuito de me auxiliar no trabalho, por ser 
 Digite os seguintes códigos em seu terminal 
 "pip install pysseract"
 "pip install pyperclip"
-"pip install pyautogui"
+"pip install pyautogui" \n\n\n
 "pip install pynput"
 clone o repositório ou código.
 
