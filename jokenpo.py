@@ -56,4 +56,5 @@ if IA == 2:
         print('Empatou')
     else:
          print('ué, deu ruim')
-    
+
+#fim do código, talvez eu coloque algum cosmético no final.

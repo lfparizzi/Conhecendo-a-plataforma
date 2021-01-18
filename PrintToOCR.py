@@ -3,7 +3,7 @@ import pytesseract # Módulo da tecnologia OCR
 import pyautogui as pg # Screenshot
 from pynput import keyboard # listener de teclas
 import os # clear screen ( cls do windows, no linux seria clear)
-import keyboard  # using module keyboard
+import keyboard  #qqkeyboard
 import time # tempo
 import pyperclip # passar o resultado para seu ctrl+v
 
@@ -49,7 +49,7 @@ def GetPositionA():
 def GetPositionB():
     while True:  # loop
             try:  # se usuário apertar outra tecla não dará erro
-                print("Aperte '"+key+"' no canto inferior direito do local que deseja lerqq")
+                print("Aperte '"+key+"' no canto inferior direito do local que deseja ler")
                 time.sleep(0.5)
                 if stop:  #se +key+ for pressionado
                     GetPositionB.bx,GetPositionB.by = pg.position()
@@ -67,12 +67,12 @@ stop = False # temos que resetar o valor da variável para não termos problema 
 GetPositionB()
 
 #cria imagem da região selecionada
-im = pg.screenshot(imageFilename='Teste.jpg',region=(GetPositionA.ax,GetPositionA.ay, GetPositionB.bx-GetPositionA.ax, GetPositionB.by-GetPositionA.ay))
+im = pg.screenshot(imageFilename='AreaSC.jpg',region=(GetPositionA.ax,GetPositionA.ay, GetPositionB.bx-GetPositionA.ax, GetPositionB.by-GetPositionA.ay))
 
 #Linha excluisva para resolver problema de PATH
 pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Parizzi\AppData\Local\Tesseract-OCR\tesseract.exe' 
 
 #Extraindo o texto da imagem com a tecnologia OCR
-OCR = pytesseract.image_to_string( Image.open('Teste.jpg') )
+OCR = pytesseract.image_to_string( Image.open('AreaSC.jpg') )
 print(OCR)
 pyperclip.copy(OCR) # passando o texto para seu CTRL+C

@@ -5,14 +5,14 @@ import os
 clear = lambda: os.system('cls')
 
 #################################################################
-# Constants
+# Constantes
 CARDINAL_DIRECTIONS = ("N", "NE", "E", "SE", "S", "SW", "W", "NW")
-GRID_SIZE = 300; # Width (in meters) of a grid squad.
+GRID_SIZE = 300; # Distância (meters) de um mapa de malha.
 
-# Chart from in-game that will be used to calculate elevation
+# Tabela de conversões.
 DISTANCES = (50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1150,1200,1250)
 MILS      = (1579,1558,1538,1517,1496,1475,1453,1431,1409,1387,1364,1341,1317,1292,1267,1240,1212,1183,1152,1118,1081,1039,988,918,800)
-# end Constants
+# fim das constantes
 #################################################################
 
 def convertCoordinate(stringInput):
